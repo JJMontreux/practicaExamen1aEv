@@ -22,4 +22,10 @@ export class Pagina1Page {
     console.log('ionViewDidLoad Pagina1Page');
   }
 
+
+  // Método volverAtras()
+  volverAtras():void {
+    this.navCtrl.pop();
+  }
+
 }

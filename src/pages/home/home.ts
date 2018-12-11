@@ -15,7 +15,7 @@ export class HomePage {
 
 
 // Método para ir a la página pagina1
-irAPagina1():void{
+irAPagina1():void {
   this.navCtrl.push(Pagina1Page);
 }
 
