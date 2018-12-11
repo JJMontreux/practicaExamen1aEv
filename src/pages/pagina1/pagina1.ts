@@ -15,7 +15,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Pagina1Page {
 
+// Variable declarada para almacenar el valor de la variable pasada desde home mediante el botón Enviar
+nombre = "";
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    // Mediante el atributo navParams obtenemos el valor pasado
+    this.nombre = navParams.get("nombre");
+
   }
 
   ionViewDidLoad() {

@@ -16,9 +16,28 @@
 
 
   <!-- Añado botón -->
-  <button ion-button block (click)="irAPagina1()">Ir a página 1</button>
+  <button ion-button block (click)="irAPagina1()">Ir a página 1 (sin pasar datos)</button>
 
   <!-- Añadido como prueba  -->
   <!-- <p>Texto provisional de portada.</p> -->
+
+  <!-- Componente tarjeta para petición de nombre -->
+  <ion-card>
+    <ion-card-content>
+
+      <!-- Componente ion-list -->
+      <ion-list>
+        <ion-item> <!-- item de la lista -->
+          <ion-label floating>Nombre</ion-label> <!-- Etiqueta -->
+          <ion-input type="text" [(ngModel)]="nombre"></ion-input> <!-- Mediante el elemento ngModel pasamos el valor recogido por el input a la variable nombre ubicada en la clase de la pagina1.ts -->
+        </ion-item>
+      </ion-list>
+
+      <!-- Ahora, el botón Enviar llamará al método para procesar el dato introducido en el input -->
+      <button ion-button block (click)="procesarDatos()">Enviar</button>
+
+    </ion-card-content>
+  </ion-card>
+
 
 </ion-content>
