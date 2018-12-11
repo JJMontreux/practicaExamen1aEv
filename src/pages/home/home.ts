@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { Pagina1Page } from '../pagina1/pagina1'; // <-- Autoimportada al añadir la clase al método irAPagina1()
+import { Pagina2Page } from './../pagina2/pagina2'; // <-- Autoimportada al añadir la clase al método irAPagina2()
 
 @Component({
   selector: 'page-home',
@@ -29,6 +30,11 @@ public procesarDatos():void {
   this.navCtrl.push(Pagina1Page, {nombre:this.nombre}); // El contenido entre llaves indica que se pase (a Pagina1Page) el valor de la variable this.nombre "envuelto", a su vez, en la variable nombre (nombre:)
 }
 
+
+// Método para ir a la página pagina2
+irAPagina2():void {
+  this.navCtrl.push(Pagina2Page);
+}
 
 
 }
